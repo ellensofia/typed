@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    --main-grid: minmax(90px, 1fr) [main-start] minmax(0, 70rem) [main-end] minmax(40px, 1fr);
+}
+
+.container {
+    display: grid;
+}
+
+
+/* Menu */
+
+.parent {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: center;
+    background-color: rgb(22, 22, 22, 0);
+}
+
+.hero {
+    background-image: url(https://images.pexels.com/photos/2923595/pexels-photo-2923595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(130px, 1fr) [main-start] minmax(0, 1fr) [main-end] minmax(30px, 1fr);
+}
+
+.hero .typed-cursor {
+    font-size: 4rem;
+}
+
+.hero__inner {
+    grid-column: main;
+    min-height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.hero__inner h2 {
+    margin: 0 100px;
+}
+
+.hero h2 span {
+    color: red;
+}
+
+button {
+    border: none;
+    background-color: red;
+    padding: 10px 15px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+}
+
+button:hover {
+    background-color:rgb(179, 0, 0);
+}
+ 
+
+.section {
+    background-color: rgb(22, 22, 22);
+    display: grid;
+    grid-template-columns: var(--main-grid);
+}
+
+.section__inner {
+    grid-column: main;
+    margin: 0 auto;
+    color: #f1f1f1;
+}
+
+.section__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 37rem;
+}
+
+.section__headline {
+    font-size: 3.4rem;
+    margin: 6rem 0 0 0;
+}
+
+.section__text {
+    font-size: 1rem;
+    margin: 2rem 0 0;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.section button{
+    margin: 4rem 0 6rem 0;
+    width: 120px;
+}
+
+.element {
+    height: 1.5rem;
+    grid-column: main;
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    position: relative;
+    display: flex;
+    justify-self: flex-end;
+}
+
+span.typed-cursor {
+    display: none;
+}
